@@ -32,3 +32,9 @@ au Bufread,BufNewFile *py,*pyw match BadWhiteSpace /\s\+$/
 au Bufread,BufNewFile *py,*pyw set fileformat=unix 
 " For full syntax highlighting
 let python_highlight_all=1                          
+
+" ========= Markdown =========
+autocmd BufNewFile,BufRead *.md set filetype=markdown	    " Treat all .md files as markdown
+autocmd FileType markdown set cursorline		    " Highlight the line the cursor is on
+autocmd FileType markdown setlocal spell spelllang=en_us    " Set spell check to American English
+autocmd FileType markdown set wrap			    " Wrap lines
